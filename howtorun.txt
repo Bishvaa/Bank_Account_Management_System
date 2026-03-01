@@ -1,0 +1,57 @@
+======================================================
+BANK ACCOUNT MANAGEMENT SYSTEM - HOW TO RUN
+======================================================
+
+Requirements:
+- Java JDK 11 or higher
+- Maven installed (if running from terminal)
+- IntelliJ IDEA or Eclipse (optional, for IDE use)
+
+------------------------------------------------------
+OPTION 1: RUNNING VIA TERMINAL / COMMAND PROMPT 
+------------------------------------------------------
+Open your terminal or command prompt, navigate to the `Bank` folder (where the pom.xml file is), and use the following Maven commands:
+
+To Recompile the project:
+> mvn compile
+
+To Run the Bank GUI Application:
+> mvn exec:java
+
+To Run all JUnit 5 Test Cases:
+> mvn test
+
+------------------------------------------------------
+OPTION 2: RUNNING VIA INTELLIJ IDEA
+------------------------------------------------------
+1. Open IntelliJ and select File -> Open -> Choose the "Bank" folder.
+2. If prompted, click "Load Maven Project" or right-click the `pom.xml` file and select "Add as Maven Project".
+
+To Run the Bank GUI:
+1. In the project explorer, navigate to: `src` -> `main` -> `java` -> `BankGUI.java`
+2. Open `BankGUI.java`.
+3. Locate the `public static void main(String[] args)` method at the very bottom.
+4. Click the green "Play" icon (▶) next to it and select "Run 'BankGUI.main()'".
+
+To Run the Test Cases:
+1. Navigate to: `src` -> `test` -> `java` -> `BankAccountTest.java`
+2. Click the double-green "Play" icon (▶▶) next to the class name `class BankAccountTest`.
+3. Select "Run 'BankAccountTest'". All 7 test cases should pass and display green checkmarks!
+
+------------------------------------------------------
+PROJECT STRUCTURE
+------------------------------------------------------
+Bank/
+│
+├── pom.xml                 (Maven Configuration)
+├── howtorun.txt            (This file)
+│
+└── src/
+    ├── main/java/          (Source Code)
+    │   ├── BankAccount.java
+    │   ├── Transaction.java
+    │   ├── InsufficientFundsException.java
+    │   └── BankGUI.java    (Main Application Window)
+    │
+    └── test/java/          (Unit Tests)
+        └── BankAccountTest.java
